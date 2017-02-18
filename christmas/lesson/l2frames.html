@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>圣诞主题</title>
+    <style type="text/css">
+    .bird {
+        min-width: 91px;
+        min-height: 71px;
+        top: 10%;
+        position: absolute;
+        z-index: 10;
+        background: url(http://img.mukewang.com/55ade1700001b38302730071.png)
+    }
+
+    .birdFly {
+        /*写法1*/
+        /*-moz-animation: bird-slow 400ms steps(3,start) infinite;*/
+
+        /*写法2*/
+        /*1*/
+        -webkit-animation-name: bird-slow;
+        -webkit-animation-duration: 400ms;
+        -webkit-animation-timing-function: steps(2);
+        -webkit-animation-iteration-count: infinite;
+
+        /*2*/
+        /*-webkit-animation-name: bird-slow;
+        -webkit-animation-duration: 400ms;
+        -webkit-animation-timing-function: steps(3);
+        -webkit-animation-iteration-count: infinite;*/
+    }
+
+    /*???*/
+    /*1*/
+    @keyframes bird-slow {
+        0% {background-position-x: -0px;}
+        75% {background-position-x: -182px;}
+    }
+
+    /*2*/
+    /*@keyframes bird-slow {
+        0% {background-position-x: -0px;}
+        100% {background-position-x: -273px;}
+    }*/
+    /* 1/2写法等价 在frames之间变化三次，0和182/0和273相当于同一点*/
+    </style>
+</head>
+
+<body>
+    steps(3)实现帧动画
+    <div class="bird birdFly"></div>
+</body>
+<script type="text/javascript">
+var docEl = document.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function() {
+        //设置根字体大小
+        docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
+    };
+
+//绑定浏览器缩放与加载时间
+window.addEventListener(resizeEvt, recalc, false);
+document.addEventListener('DOMContentLoaded', recalc, false);
+</script>
+
+</html>
