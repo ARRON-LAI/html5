@@ -3,7 +3,7 @@
   function resize(){
     var docWidth = document.documentElement.clientWidth || document.body.clientWidth;
     console.log(docWidth);
-    docEl.style.fontSize = 20 * docWidth / 320 + "px";
+    docEl.style.fontSize = docWidth / 320 + "px";
 
     var pages = document.getElementsByClassName("page");
     var container = document.getElementsByClassName("container")[0];

@@ -12,4 +12,11 @@
   //audio
   var audio = new Audio("./assets/christmas.mp3");
   audio.loop = true;
-  audio.play();
+  // audio.play();
+
+  //draw cloud
+  // var canvas = document.getElementsByClassName("cloud")[0];
+  // var ctx = canvas.getContext("2d");
+  // ctx.arc(50, 50, 50, 0, 2*Math.pi);
+  // ctx.fillStyle = "blue";
+  // ctx.fill();
