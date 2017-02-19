@@ -8,3 +8,8 @@
   function changeBack() {
     p3.setAttribute('class', 'page effectIn');
   }
+
+  //audio
+  var audio = new Audio("./assets/christmas.mp3");
+  audio.loop = true;
+  audio.play();
