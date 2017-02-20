@@ -12,7 +12,7 @@
   //audio
   var audio = new Audio("./assets/christmas.mp3");
   audio.loop = true;
-  // audio.play();
+  audio.play();
 
   //draw cloud
   // var canvas = document.getElementsByClassName("cloud")[0];
