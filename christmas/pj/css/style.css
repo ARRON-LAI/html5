@@ -161,3 +161,24 @@ input{
     -moz-transform: translateY(-1rem);
   }
 }
+
+.deer {
+  position: absolute;
+  right: 15rem;
+  top: 50rem;
+  height: 26.9rem;
+  width: 74.1rem;
+  background: url("../assets/deer.png");
+  background-size: 400%;
+  -webkit-animation: deerAni 1s steps(4) infinite;
+  -webkit-animation: deerAni 1s steps(4) infinite;
+}
+
+@keyframes deerAni {
+  0%{
+    background-position: 0% 100%;
+  }
+  100%{
+    background-position: 400% 100%;
+  }
+}
