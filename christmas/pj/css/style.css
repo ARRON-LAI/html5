@@ -164,12 +164,15 @@ input{
 
 .deer {
   position: absolute;
-  right: 15rem;
-  top: 50rem;
-  height: 26.9rem;
-  width: 74.1rem;
+  right: 25rem;
+  top: 30rem;
+  height: 8.07rem;
+  width: 22.23rem;
   background: url("../assets/deer.png");
   background-size: 400%;
+}
+
+.deerAnimation {
   -webkit-animation: deerAni 1s steps(4) infinite;
   -webkit-animation: deerAni 1s steps(4) infinite;
 }

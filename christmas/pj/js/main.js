@@ -1,12 +1,13 @@
   var p1 = document.getElementById("p1");
   var p3 = document.getElementById("p3");
+
   function changeScene() {
-    p1.setAttribute('class', 'page effectOut');
-    // p2.setAttribute('class', 'page effectIn');
+      p1.setAttribute('class', 'page effectOut');
+      // p2.setAttribute('class', 'page effectIn');
   }
 
   function changeBack() {
-    p3.setAttribute('class', 'page effectIn');
+      p3.setAttribute('class', 'page effectIn');
   }
 
   //audio
@@ -14,9 +15,41 @@
   audio.loop = true;
   audio.play();
 
-  //draw cloud
-  // var canvas = document.getElementsByClassName("cloud")[0];
-  // var ctx = canvas.getContext("2d");
-  // ctx.arc(50, 50, 50, 0, 2*Math.pi);
-  // ctx.fillStyle = "blue";
-  // ctx.fill();
+  function deerRun() {
+      run({
+          "style" : {
+            "top" : "120rem",
+            "right" : "300rem",
+            "scale" : "2.5"
+          },
+          "time" : "9000"
+      }).then(function() {
+          return run({
+            "style" : {
+              "rotateY":"180"
+            },
+            "time" : "300"
+          });
+        }).then(function(){
+            return run({
+              "style" : {
+                "top" : "180rem",
+                "right" : "30rem",
+                "scale" : "4"
+              },
+              "time" : "9000"
+            });
+          }).then(function(){
+            $(".deer").removeClass("deerAnimation");
+            $("#cs").css("display", "inline-block");
+            $("#cs2").css("display", "inline-block");
+          });
+  }
+
+  function run(cond) {
+      var deferred = $.Deferred();
+      $('.deer').transition(cond.style, cond.time, "linear", function() {
+          deferred.resolve();
+      });
+      return deferred;
+  }
