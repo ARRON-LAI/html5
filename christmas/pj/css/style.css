@@ -35,20 +35,20 @@ input{
 .effectIn {
   opacity: 0;
   z-index: 7 !important;
-  -webkit-animation: effectIn 3s ease-in-out forwards;
+  -webkit-animation: effectIn 3s linear forwards;
   -webkit-transform-origin: 70% 70%;
   /*-webkit-transform: scale(1);*/
-  -moz-animation: effectIn 3s ease-in-out forwards;
+  -moz-animation: effectIn 3s linear forwards;
   -moz-transform-origin: 70% 70%;
   /*-moz-transform: scale(1);*/
 }
 
 .effectOut {
   opacity: 1;
-  -webkit-animation: effectOut 3s ease-in-out forwards;
+  -webkit-animation: effectOut 3s linear forwards;
   -webkit-transform-origin: 70% 70%;
   /*-webkit-transform: scale(8);*/
-  -moz-animation: effectOut 3s ease-in-out forwards;
+  -moz-animation: effectOut 3s linear forwards;
   -moz-transform-origin: 70% 70%;
   /*-moz-transform: scale(8);*/
 }
@@ -56,8 +56,8 @@ input{
 @keyframes effectIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(8);
-    -moz-transform: scale(8);
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
   }
   100% {
     opacity: 1;
@@ -74,8 +74,8 @@ input{
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(8);
-    -moz-transform: scale(8);
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
   }
 }
 
