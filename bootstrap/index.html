@@ -14,7 +14,13 @@
         <h1 class="text-uppercase bg-success">tab</h1>
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#paragraph1">paragraph 1</a></li>
-          <li><a data-toggle="tab" href="#paragraph2">paragraph 2</a></li>
+          <li class="dropdown">
+            <a calss="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Menu<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a data-toggle="tab" href="#paragraph21">Paragraph 2.1</a></li>
+              <li><a data-toggle="tab" href="#paragraph22">Paragraph 2.2</a></li>
+            </ul>
+          </li>
           <li><a data-toggle="tab" href="#paragraph3">paragraph 3</a></li>
           <li><a data-toggle="tab" href="#paragraph4">paragraph 4</a></li>
         </ul>
@@ -22,8 +28,10 @@
           <div id="paragraph1" class="tab-pane active">
             <p>This is paragraph 1, it should appear when you click tab1</p>
           </div>
-          <div id="paragraph2" class="tab-pane">
-            <p>This is paragraph 2</p>
+          <div id="paragraph21" class="tab-pane">
+            <p>This is paragraph 2.1 : haha</p>
+          </div><div id="paragraph22" class="tab-pane">
+            <p>This is paragraph 2.2 : lala</p>
           </div>
           <div id="paragraph3" class="tab-pane">
             <p>This is paragraph 3............</p>
@@ -63,6 +71,25 @@
           </div>
           <a class="left carousel-control" role="button" data-target="#myCarousel" data-slide="prev" style="background:transparent; color:#333"><i class="glyphicon glyphicon-chevron-left"></i></a>
           <a class="right carousel-control" role="button" data-target="#myCarousel" data-slide="next" style="background:transparent; color:#333"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="text-right bg-danger">Modal</h1>
+        <button type="button" name="button" class="btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Modal</button>
+        <div id="myModal" class="modal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>
+                  This is a Modal
+                </h4>
+              </div>
+              <div class="modal-body">
+                <p>lalala.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
