@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>Bootstrap Practice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h1 class="text-uppercase bg-success">tab</h1>
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#paragraph1">paragraph 1</a></li>
+          <li><a data-toggle="tab" href="#paragraph2">paragraph 2</a></li>
+          <li><a data-toggle="tab" href="#paragraph3">paragraph 3</a></li>
+          <li><a data-toggle="tab" href="#paragraph4">paragraph 4</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="paragraph1" class="tab-pane active">
+            <p>This is paragraph 1, it should appear when you click tab1</p>
+          </div>
+          <div id="paragraph2" class="tab-pane">
+            <p>This is paragraph 2</p>
+          </div>
+          <div id="paragraph3" class="tab-pane">
+            <p>This is paragraph 3............</p>
+          </div>
+          <div id="paragraph4" class="tab-pane">
+            <p>This is paragraph 4. Hahahahahah</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="bg-warning text-center text-uppercase">Carousel</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item text-center active">
+              <img src="./assets/carousel1.jpg" alt="carousel image 1" class="img-responsive" style="display:inline-block">
+            </div>
+            <div class="text-center item">
+              <img src="./assets/carousel2.jpg" alt="carousel image 1" class="img-responsive" style="display:inline-block">
+            </div>
+            <div class="text-center item">
+              <img src="./assets/carousel3.jpg" alt="carousel image 1" class="img-responsive" style="display:inline-block">
+            </div>
+            <div class="text-center item">
+              <img src="./assets/carousel4.jpg" alt="carousel image 1" class="img-responsive" style="display:inline-block">
+            </div>
+            <div class="text-center item">
+              <img src="./assets/carousel5.jpg" alt="carousel image 1" class="img-responsive" style="display:inline-block">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>
